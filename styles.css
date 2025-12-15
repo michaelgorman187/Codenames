@@ -1,0 +1,130 @@
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  body {
+    display: grid;
+    place-items: center;
+    background: #f3f3f3;
+    font-family: system-ui, Arial, sans-serif;
+  }
+  
+/* Outer box */
+.grid-container {
+    width: min(90vmin, 600px);
+    aspect-ratio: 1 / 1;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto repeat(5, 1fr) auto; /* title, grid, button */
+    gap: 8px;
+    padding: 12px;
+    background: #ffffff;
+    border: 2px solid #ccc;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+  }
+  
+  /* Title styling */
+  .title {
+    grid-column: span 5;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+    padding: 6px 0;
+  }
+  
+  /* Base cell style */
+
+  .cell {
+    position: relative;
+    transition: transform 120ms ease, box-shadow 120ms ease;
+    will-change: transform;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    position: relative;
+    transition: transform 150ms ease, box-shadow 150ms ease;
+    will-change: transform;
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .grid-container {
+    perspective: 800px;
+  }
+  
+  .cell.hovering {
+    box-shadow: 0 10px 16px rgba(0, 0, 0, 0.22);
+  }
+  
+  
+  /* Neutral (beige) */
+  .neutral {
+    background: #d8c8a0;
+    box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.1);
+  }
+  
+/* Team One (blue with circle, styled like card) */
+.teamOne {
+    background: #1e90ff;
+    box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.15);
+    position: relative;
+    color: #1e90ff;
+    text-shadow: 
+    -1px -1px 0 #fff,
+     1px -1px 0 #fff,
+    -1px  1px 0 #fff,
+     1px  1px 0 #fff; /* crisp white outline */
+  }
+  
+ /* Team Two (red with diamond, styled like card) */
+.teamTwo {
+    background: #dc143c;
+    box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.15);
+    position: relative;
+    color: #dc143c;
+    text-shadow: 
+    -1px -1px 0 #fff,
+     1px -1px 0 #fff,
+    -1px  1px 0 #fff,
+     1px  1px 0 #fff; /* crisp white outline */
+  }
+
+  /* Assassin (black with white-bordered cross) */
+  .assassin {
+    background: #000000;
+    box-shadow: inset 0 0 4px rgba(255, 255, 255, 0.15);
+    color: #000000;
+    text-shadow: 
+    -1px -1px 0 #fff,
+     1px -1px 0 #fff,
+    -1px  1px 0 #fff,
+     1px  1px 0 #fff; /* crisp white outline */
+  }
+
+  /* Button styling */
+#newGame {
+    grid-column: span 5;          /* stretch across all columns */
+    align-self: center;
+    justify-self: center;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(135deg, #1e90ff, #dc143c);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s ease;
+  }
+  
+  #newGame:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #dc143c, #1e90ff);
+  }
+  
