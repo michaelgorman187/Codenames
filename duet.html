@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Codenames Dual Board</title>
+  <link rel="stylesheet" href="duetstyles.css"/>
+</head>
+<body>
+  <div class="page">
+    <div class="boards">
+      <!-- Player One -->
+      <section class="board">
+        <h2 class="title">Player One</h2>
+        <div id="grid1" class="grid">
+          <!-- 25 cells -->
+          <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+          <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+          <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+          <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+          <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+        </div>
+        <div class="conceal-overlay" aria-hidden="true"></div>
+      </section>
+
+      <!-- Player Two -->
+      <section class="board">
+        <h2 class="title">Player Two</h2>
+        <div id="grid2" class="grid">
+          <!-- 25 cells -->
+          <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+          <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+          <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+          <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+          <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+        </div>
+        <div class="conceal-overlay" aria-hidden="true"></div>
+      </section>
+    </div>
+
+    <div class="controls">
+      <button id="hide1">Hide 1</button>
+      <button id="hide2">Hide 2</button>
+      <button id="newGame">New Game</button>
+    </div>
+  </div>
+
+  <script src="duetscript.js"></script>
+</body>
+</html>
